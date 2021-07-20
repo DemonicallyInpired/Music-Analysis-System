@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import argparse
 import ftplib
 from ftplib import socket
@@ -71,12 +72,11 @@ def ftp_connection(host, user, password):
 
         ftp.quit()
 
-        print("\nCheck manifest file\n")
-
         if os.path.isfile("manifest.json"):
             verified_files = verify.verify()
         else:
-            print("Manifest file is missing.")
+            print("Manifest file is missing, skipping prediction.")
+            exit()
 
         if len(verified_files) > 0:
             x_test = convert_to_dataframe(verified_files)
