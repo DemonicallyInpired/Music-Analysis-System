@@ -7,6 +7,7 @@ from ftplib import socket
 import preprocessing as pp
 import verify
 from tensorflow.keras.models import load_model
+from Attention import Attention
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -79,10 +80,23 @@ def ftp_connection(host, user, password):
 
         if len(verified_files) > 0:
             x_test = convert_to_dataframe(verified_files)
-            x_test = np.array(pp.convert_wav_to_image(x_test, 'data'))
+            x_df = np.array(pp.convert_wav_to_image(x_test, 'data'))
 
-            prediction = model_prediction(x_test)
-            print(prediction)
+            prediction = model_prediction(x_df)
+            for i in range(len(x_test)):
+                print("Instruments Used in {}:".format(x_test.iloc[i]['audio']))
+                print("Instrument 1: {}%".format(round(prediction[i][0]*100, 2)))
+                print("Instrument 41: {}%".format(round(prediction[i][1]*100, 2)))
+                print("Instrument 42: {}%".format(round(prediction[i][2]*100, 2)))
+                print("Instrument 43: {}%".format(round(prediction[i][3]*100, 2)))
+                print("Instrument 44: {}%".format(round(prediction[i][4]*100, 2)))
+                print("Instrument 61: {}%".format(round(prediction[i][5]*100, 2)))
+                print("Instrument 69: {}%".format(round(prediction[i][6]*100, 2)))
+                print("Instrument 7: {}%".format(round(prediction[i][7]*100, 2)))
+                print("Instrument 71: {}%".format(round(prediction[i][8]*100, 2)))
+                print("Instrument 72: {}%".format(round(prediction[i][9]*100, 2)))
+                print("Instrument 74: {}%".format(round(prediction[i][10]*100, 2)))
+                print()
         else:
             print("No files available to predict.")
 
@@ -101,7 +115,7 @@ def convert_to_dataframe(li):
     return pd.DataFrame(li, columns=[['audio']])
 
 def model_prediction(df):
-    model = load_model('model.h5')
+    model = load_model("model.h5", custom_objects={'Attention': Attention})
     return model.predict(df)
 
 if args.ftp == False and args.local == None:
