@@ -77,9 +77,10 @@ def ftp_connection(host, user, password):
 
         if len(verified_files) > 0:
             x_test = convert_to_dataframe(verified_files)
-            x_test = np.array(pp.convert_wav_to_image(x_test, 'data\\'))
-            x_predict = model_prediction(x_test)
-            print(x_predict)
+            x_test = np.array(pp.convert_wav_to_image(x_test, 'data'))
+
+            prediction = model_prediction(x_test)
+            print(prediction)
         else:
             print("No files available to predict.")
 
