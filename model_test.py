@@ -6,7 +6,6 @@ import argparse
 import ftplib
 from ftplib import socket
 import preprocessing as pp
-import verify
 from tensorflow.keras.models import load_model
 from Attention import Attention
 import warnings
@@ -72,7 +71,8 @@ def ftp_connection(host, user, password):
 
         ftp.quit()
 
-        if os.path.isfile("manifest.json"):
+        if os.path.isfile("manifest.json") and os.path.isfile("verify.py"):
+            import verify
             verified_files = verify.verify()
         else:
             print("Manifest file is missing, skipping prediction.")
