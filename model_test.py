@@ -7,6 +7,8 @@ from ftplib import socket
 import preprocessing as pp
 import verify
 from tensorflow.keras.models import load_model
+import warnings
+warnings.filterwarnings('ignore')
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--ftp", action='store_true')
