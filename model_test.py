@@ -78,6 +78,7 @@ def ftp_connection(host, user, password):
         if len(verified_files) > 0:
             x_test = convert_to_dataframe(verified_files)
             x_test = np.array(pp.convert_wav_to_image(x_test, 'data\\'))
+            x_predict = model_prediction(x_test)
         else:
             print("No files available to predict.")
 
@@ -94,6 +95,10 @@ def local_directory(dir):
 
 def convert_to_dataframe(li):
     return pd.DataFrame(li, columns=[['audio']])
+
+def model_prediction(df):
+    model = load_model('model.h5')
+    return model.predict(df)
 
 
 if args.ftp == False and args.local == None:
