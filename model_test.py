@@ -79,6 +79,7 @@ def ftp_connection(host, user, password):
             x_test = convert_to_dataframe(verified_files)
             x_test = np.array(pp.convert_wav_to_image(x_test, 'data\\'))
             x_predict = model_prediction(x_test)
+            print(x_predict)
         else:
             print("No files available to predict.")
 
@@ -99,7 +100,6 @@ def convert_to_dataframe(li):
 def model_prediction(df):
     model = load_model('model.h5')
     return model.predict(df)
-
 
 if args.ftp == False and args.local == None:
     print("Please provide either --ftp or --local argument.")
