@@ -24,7 +24,7 @@ def verify():
     corrupted_files = []
 
     for file in present_files:
-        if manifest[file]['crc'] == crc("data/{}".format(file)):
+        if manifest[file]['crc'] == crc(os.path.join("data","{}".format(file))):
             available_files.append(file)
         else:
             corrupted_files.append(file)

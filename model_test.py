@@ -55,14 +55,14 @@ def ftp_connection(host, user, password):
                     file.close()
             else:
 
-                file_exists = os.path.isfile("data\\{}".format(filename))
+                file_exists = os.path.isfile(os.path.join("data", "{}".format(filename)))
 
                 if file_exists:
                     print("{} already exists.".format(filename))
                     continue
                 else:
                     print("Downloading: {}".format(filename))
-                    local_files = os.path.join(os.getcwd(), "data\\{}".format(filename))
+                    local_files = os.path.join(os.getcwd(),"data","{}".format(filename))
                     file = open(local_files, 'wb')
                     ftp.retrbinary("RETR "+ filename, file.write)
                     file.close()
