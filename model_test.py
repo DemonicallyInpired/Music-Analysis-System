@@ -84,7 +84,6 @@ def ftp_connection(host, user, password):
             exit()
 
         if len(verified_files) > 0:
-            verified_files = check_file_duration("data", verified_files)
             x_test = convert_to_dataframe(verified_files)
             x_df = np.array(pp.convert_wav_to_image(x_test, 'data'))
 
@@ -119,19 +118,6 @@ def local_directory(dir):
 
 def convert_to_dataframe(li):
     return pd.DataFrame(li, columns=[['audio']])
-
-def check_file_duration(dir, files):
-    li = []
-
-    for file in files:
-        # If file duration is greater than 30 seconds and less than 15 minutes (900 seconds), add to list
-        if librosa.get_duration(filename=os.path.join(dir, file)) > 30 and librosa.get_duration(filename=os.path.join(dir, file)) < 900:
-            li.append(file)
-        else:
-            print("{} is too long or too short to be used for prediction. Skipping.".format(file))
-    
-    print()
-    return li
 
 def model_prediction(df):
     model = load_model("model.h5", custom_objects={'Attention': Attention})
