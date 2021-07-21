@@ -72,7 +72,11 @@ def ftp_connection(host, user, password):
         ftp.quit()
 
         if os.path.isfile("manifest.json") and os.path.isfile("verify.py"):
-            import verify
+            try:
+                import verify
+            except (ImportError, ModuleNotFoundError):
+                print("verify.py not found. Please download the file and place it in the same directory as this file.")
+                exit()
             verified_files = verify.verify()
         else:
             print("Manifest file is missing, skipping prediction.")
