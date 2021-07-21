@@ -1,0 +1,143 @@
+1728.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/1728.wav
+Format                                   : Wave
+File size                                : 42.2 MiB
+Duration                                 : 4 min 11 s
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 kb/s
+
+Audio
+Format                                   : PCM
+Format profile                           : Float
+Codec ID                                 : 3
+Codec ID/Hint                            : IEEE 
+Duration                                 : 4 min 11 s
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 44.1 kHz
+Bit depth                                : 32 bits
+Stream size                              : 42.2 MiB (100%)
+
+
+
+1729.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/1729.wav
+Format                                   : Wave
+File size                                : 74.8 MiB
+Duration                                 : 7 min 24 s
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 kb/s
+
+Audio
+Format                                   : PCM
+Format profile                           : Float
+Codec ID                                 : 3
+Codec ID/Hint                            : IEEE 
+Duration                                 : 7 min 24 s
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 44.1 kHz
+Bit depth                                : 32 bits
+Stream size                              : 74.8 MiB (100%)
+
+
+
+2382.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/2382.wav
+Format                                   : Wave
+File size                                : 19.9 MiB
+Duration                                 : 1 min 57 s
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 kb/s
+
+Audio
+Format                                   : PCM
+Format profile                           : Float
+Codec ID                                 : 3
+Codec ID/Hint                            : IEEE 
+Duration                                 : 1 min 57 s
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 44.1 kHz
+Bit depth                                : 32 bits
+Stream size                              : 19.9 MiB (100%)
+
+
+
+2416.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/2416.wav
+Format                                   : Wave
+File size                                : 23.4 MiB
+Duration                                 : 2 min 19 s
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 kb/s
+
+Audio
+Format                                   : PCM
+Format profile                           : Float
+Codec ID                                 : 3
+Codec ID/Hint                            : IEEE 
+Duration                                 : 2 min 19 s
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 44.1 kHz
+Bit depth                                : 32 bits
+Stream size                              : 23.4 MiB (100%)
+
+
+
+2556.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/2556.wav
+Format                                   : Wave
+File size                                : 25.5 MiB
+Duration                                 : 2 min 31 s
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 1 411 kb/s
+
+Audio
+Format                                   : PCM
+Format profile                           : Float
+Codec ID                                 : 3
+Codec ID/Hint                            : IEEE 
+Duration                                 : 2 min 31 s
+Bit rate mode                            : Constant
+Bit rate                                 : 1 411.2 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 44.1 kHz
+Bit depth                                : 32 bits
+Stream size                              : 25.5 MiB (100%)
+
+
+
+StarWars60.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/StarWars60.wav
+Format                                   : Wave
+File size                                : 2.52 MiB
+Duration                                 : 1 min 0 s
+Overall bit rate mode                    : Constant
+Overall bit rate                         : 353 kb/s
+
+Audio
+Format                                   : PCM
+Format settings                          : Little / Signed
+Codec ID                                 : 1
+Duration                                 : 1 min 0 s
+Bit rate mode                            : Constant
+Bit rate                                 : 352.8 kb/s
+Channel(s)                               : 1 channel
+Sampling rate                            : 22.05 kHz
+Bit depth                                : 16 bits
+Stream size                              : 2.52 MiB (100%)
+
+
+

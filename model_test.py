@@ -11,6 +11,7 @@ from tensorflow.keras.models import load_model
 from Attention import Attention
 import warnings
 warnings.filterwarnings('ignore')
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--ftp", action='store_true')
@@ -113,9 +114,49 @@ def ftp_connection(host, user, password):
         print("Permission Denied.")
 
 def local_directory(dir):
-    # Left for Sagar
-    pass
+    try:
+        files = os.listdir(dir)
+        if(len(files) == 0):
+             sys.exit("Can't process Empty folder")
+        else: 
+            if(os.path.isdir("data")):
+                pass
+        import subprocess
+        subprocess.run([os.getcwd()+"/WavError.sh", 
+                "-f "+str(dir)], shell=True)
+        import local_check
+        verified_files = local_check.return_verified()
+        if len(verified_files) > 0:
+            x_test = convert_to_dataframe(verified_files)
+            x_df = np.array(pp.convert_wav_to_image(x_test, 'data'))
 
+            prediction = model_prediction(x_df)
+            for i in range(len(x_test)):
+                print("Instruments Used in {}:".format(x_test.iloc[i]['audio']))
+                print("Instrument 1: {}%".format(round(prediction[i][0]*100, 2)))
+                print("Instrument 41: {}%".format(round(prediction[i][1]*100, 2)))
+                print("Instrument 42: {}%".format(round(prediction[i][2]*100, 2)))
+                print("Instrument 43: {}%".format(round(prediction[i][3]*100, 2)))
+                print("Instrument 44: {}%".format(round(prediction[i][4]*100, 2)))
+                print("Instrument 61: {}%".format(round(prediction[i][5]*100, 2)))
+                print("Instrument 69: {}%".format(round(prediction[i][6]*100, 2)))
+                print("Instrument 7: {}%".format(round(prediction[i][7]*100, 2)))
+                print("Instrument 71: {}%".format(round(prediction[i][8]*100, 2)))
+                print("Instrument 72: {}%".format(round(prediction[i][9]*100, 2)))
+                print("Instrument 74: {}%".format(round(prediction[i][10]*100, 2)))
+                print()
+        else:
+            print("No files available to predict.")
+    except OSError as e:
+        print(e.errno)
+    except PermissionError: 
+        print("Permission denied change the executable bit")
+    except FileNotFoundError: 
+        print("File not found")
+    except (ImportError, ModuleNotFoundError):
+                print("Please ensure the following files are available in the current working directy:")
+                print("\n{}{}{}".format("data/", "local_check.py", "Output/", "WavError.sh"))
+                exit()
 def convert_to_dataframe(li):
     return pd.DataFrame(li, columns=[['audio']])
 
