@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import librosa
 import numpy as np
 import pandas as pd
@@ -155,7 +156,7 @@ def local_directory(dir):
         print("File not found")
     except (ImportError, ModuleNotFoundError):
                 print("Please ensure the following files are available in the current working directy:")
-                print("\n{}{}{}".format("data/", "local_check.py", "Output/", "WavError.sh"))
+                print("\n{}{}{}{}".format("data/", "local_check.py", "Output/", "WavError.sh"))
                 exit()
 def convert_to_dataframe(li):
     return pd.DataFrame(li, columns=[['audio']])
