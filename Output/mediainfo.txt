@@ -1,6 +1,6 @@
 1728.wav
 General
-Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/1728.wav
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/1728.wav
 Format                                   : Wave
 File size                                : 42.2 MiB
 Duration                                 : 4 min 11 s
@@ -24,7 +24,7 @@ Stream size                              : 42.2 MiB (100%)
 
 1729.wav
 General
-Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/1729.wav
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/1729.wav
 Format                                   : Wave
 File size                                : 74.8 MiB
 Duration                                 : 7 min 24 s
@@ -48,7 +48,7 @@ Stream size                              : 74.8 MiB (100%)
 
 2382.wav
 General
-Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/2382.wav
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/2382.wav
 Format                                   : Wave
 File size                                : 19.9 MiB
 Duration                                 : 1 min 57 s
@@ -72,7 +72,7 @@ Stream size                              : 19.9 MiB (100%)
 
 2416.wav
 General
-Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/2416.wav
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/2416.wav
 Format                                   : Wave
 File size                                : 23.4 MiB
 Duration                                 : 2 min 19 s
@@ -96,7 +96,7 @@ Stream size                              : 23.4 MiB (100%)
 
 2556.wav
 General
-Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/2556.wav
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/2556.wav
 Format                                   : Wave
 File size                                : 25.5 MiB
 Duration                                 : 2 min 31 s
@@ -118,9 +118,67 @@ Stream size                              : 25.5 MiB (100%)
 
 
 
+PV.wav
+General
+Unique ID                                : 10348093927949639416690340210607569791 (0x7C8F86BE49DA622630AA95D744EBB7F)
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/PV.wav
+Format                                   : Matroska
+Format version                           : Version 4
+File size                                : 11.1 MiB
+Duration                                 : 1 min 18 s
+Overall bit rate                         : 1 190 kb/s
+Writing application                      : Lavf58.45.100
+Writing library                          : Lavf58.45.100
+ErrorDetectionType                       : Per level 1
+FileExtension_Invalid                    : mkv mk3d mka mks
+
+Video
+ID                                       : 1
+Format                                   : AVC
+Format/Info                              : Advanced Video Codec
+Format profile                           : High@L4
+Format settings                          : CABAC / 3 Ref Frames
+Format settings, CABAC                   : Yes
+Format settings, Reference frames        : 3 frames
+Codec ID                                 : V_MPEG4/ISO/AVC
+Duration                                 : 1 min 18 s
+Width                                    : 1 920 pixels
+Height                                   : 1 080 pixels
+Display aspect ratio                     : 16:9
+Frame rate mode                          : Constant
+Frame rate                               : 23.976 (24000/1001) FPS
+Color space                              : YUV
+Chroma subsampling                       : 4:2:0
+Bit depth                                : 8 bits
+Scan type                                : Progressive
+Title                                    : ISO Media file produced by Google Inc.
+Writing library                          : x264 core 155 r2901 7d0ff22
+Default                                  : Yes
+Forced                                   : No
+Color range                              : Limited
+Color primaries                          : BT.709
+Transfer characteristics                 : BT.709
+Matrix coefficients                      : BT.709
+
+Audio
+ID                                       : 2
+Format                                   : Opus
+Codec ID                                 : A_OPUS
+Duration                                 : 1 min 18 s
+Channel(s)                               : 2 channels
+Channel layout                           : L R
+Sampling rate                            : 48.0 kHz
+Bit depth                                : 32 bits
+Compression mode                         : Lossy
+Language                                 : English
+Default                                  : Yes
+Forced                                   : No
+
+
+
 StarWars60.wav
 General
-Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/MusicAnalysis/Music-Analysis-System/data/StarWars60.wav
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/StarWars60.wav
 Format                                   : Wave
 File size                                : 2.52 MiB
 Duration                                 : 1 min 0 s
@@ -138,6 +196,17 @@ Channel(s)                               : 1 channel
 Sampling rate                            : 22.05 kHz
 Bit depth                                : 16 bits
 Stream size                              : 2.52 MiB (100%)
+
+
+
+w_audio.wav
+General
+Complete name                            : /media/demonicallyinspired/17461d65-1281-42f4-8416-c1709bdc20b0/Music-Analysis-System/data/w_audio.wav
+Format                                   : MZ
+Format profile                           : DLL / AMD x86-64
+File size                                : 1.39 MiB
+Encoded date                             : UTC 2051-10-13 03:13:11
+FileExtension_Invalid                    : exe dll
 
 
 
