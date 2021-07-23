@@ -86,24 +86,7 @@ def ftp_connection(host, user, password):
             exit()
 
         if len(verified_files) > 0:
-            x_test = convert_to_dataframe(verified_files)
-            x_df = np.array(pp.convert_wav_to_image(x_test, 'data'))
-
-            prediction = model_prediction(x_df)
-            for i in range(len(x_test)):
-                print("Instruments Used in {}:".format(x_test.iloc[i]['audio']))
-                print("Instrument 1: {}%".format(round(prediction[i][0]*100, 2)))
-                print("Instrument 41: {}%".format(round(prediction[i][1]*100, 2)))
-                print("Instrument 42: {}%".format(round(prediction[i][2]*100, 2)))
-                print("Instrument 43: {}%".format(round(prediction[i][3]*100, 2)))
-                print("Instrument 44: {}%".format(round(prediction[i][4]*100, 2)))
-                print("Instrument 61: {}%".format(round(prediction[i][5]*100, 2)))
-                print("Instrument 69: {}%".format(round(prediction[i][6]*100, 2)))
-                print("Instrument 7: {}%".format(round(prediction[i][7]*100, 2)))
-                print("Instrument 71: {}%".format(round(prediction[i][8]*100, 2)))
-                print("Instrument 72: {}%".format(round(prediction[i][9]*100, 2)))
-                print("Instrument 74: {}%".format(round(prediction[i][10]*100, 2)))
-                print()
+            make_prediction(verified_files)
         else:
             print("No files available to predict.")
 
@@ -118,34 +101,22 @@ def local_directory(dir):
     try:
         files = os.listdir(dir)
         if(len(files) == 0):
-             sys.exit("Can't process Empty folder")
+             sys.exit("Can't process an empty folder.")
         else: 
             if(os.path.isdir("data")):
                 pass
+
         import subprocess
+
         subprocess.run([os.getcwd()+"/WavError.sh", 
                 "-f "+str(dir)], shell=True)
-        import local_check
-        verified_files = local_check.return_verified()
-        if len(verified_files) > 0:
-            x_test = convert_to_dataframe(verified_files)
-            x_df = np.array(pp.convert_wav_to_image(x_test, 'data'))
 
-            prediction = model_prediction(x_df)
-            for i in range(len(x_test)):
-                print("Instruments Used in {}:".format(x_test.iloc[i]['audio']))
-                print("Instrument 1: {}%".format(round(prediction[i][0]*100, 2)))
-                print("Instrument 41: {}%".format(round(prediction[i][1]*100, 2)))
-                print("Instrument 42: {}%".format(round(prediction[i][2]*100, 2)))
-                print("Instrument 43: {}%".format(round(prediction[i][3]*100, 2)))
-                print("Instrument 44: {}%".format(round(prediction[i][4]*100, 2)))
-                print("Instrument 61: {}%".format(round(prediction[i][5]*100, 2)))
-                print("Instrument 69: {}%".format(round(prediction[i][6]*100, 2)))
-                print("Instrument 7: {}%".format(round(prediction[i][7]*100, 2)))
-                print("Instrument 71: {}%".format(round(prediction[i][8]*100, 2)))
-                print("Instrument 72: {}%".format(round(prediction[i][9]*100, 2)))
-                print("Instrument 74: {}%".format(round(prediction[i][10]*100, 2)))
-                print()
+        import local_check
+
+        verified_files = local_check.return_verified()
+
+        if len(verified_files) > 0:
+           make_prediction(verified_files)
         else:
             print("No files available to predict.")
     except OSError as e:
@@ -164,6 +135,27 @@ def convert_to_dataframe(li):
 def model_prediction(df):
     model = load_model("model.h5", custom_objects={'Attention': Attention})
     return model.predict(df)
+
+def make_prediction(files):
+    x_test = convert_to_dataframe(files)
+    x_df = np.array(pp.convert_wav_to_image(x_test, 'data'))
+
+    prediction = model_prediction(x_df)
+    
+    for i in range(len(x_test)):
+        print("Instruments Used in {}:".format(x_test.iloc[i]['audio']))
+        print("Instrument 1: {}%".format(round(prediction[i][0]*100, 2)))
+        print("Instrument 41: {}%".format(round(prediction[i][1]*100, 2)))
+        print("Instrument 42: {}%".format(round(prediction[i][2]*100, 2)))
+        print("Instrument 43: {}%".format(round(prediction[i][3]*100, 2)))
+        print("Instrument 44: {}%".format(round(prediction[i][4]*100, 2)))
+        print("Instrument 61: {}%".format(round(prediction[i][5]*100, 2)))
+        print("Instrument 69: {}%".format(round(prediction[i][6]*100, 2)))
+        print("Instrument 7: {}%".format(round(prediction[i][7]*100, 2)))
+        print("Instrument 71: {}%".format(round(prediction[i][8]*100, 2)))
+        print("Instrument 72: {}%".format(round(prediction[i][9]*100, 2)))
+        print("Instrument 74: {}%".format(round(prediction[i][10]*100, 2)))
+        print()
 
 if args.ftp == False and args.local == None:
     print("Please provide either --ftp or --local argument.")
