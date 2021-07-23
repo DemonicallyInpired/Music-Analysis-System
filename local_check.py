@@ -1,9 +1,5 @@
-import re
 import os
-import sys
-from termcolor import colored, cprint
-import numpy as np
-from tabulate import tabulate
+from termcolor import colored
 import pandas as pd
 import os
 Error_log = open("Output/ffmpeg.txt", "r")
@@ -43,7 +39,6 @@ Media_list = pd.Series(Media_log.readlines())
 audio_index = list(Media_list[Media_list=='Audio\n'].index)
 video_index = list(Media_list[Media_list=='Video\n'].index)
 print("*************")
-print(video_index, audio_index)
 
 def findnext_index_lower(audio_index, video_index):
     for i in audio_index:
@@ -59,7 +54,6 @@ def CheckVideo():
         log_dict[findnext_index_lower(audio_index, video_index)]["Video"] = True
 CheckVideo()
 
-print(log_dict)
 
 videos = [log_dict[j]['Video'] for j in range(len(log_dict))]
 final_log_table = pd.DataFrame(columns = ['Name', 'Error'])
@@ -67,16 +61,12 @@ final_log_table['Name'] = names
 final_log_table['Error'] = errors
 final_log_table['Video'] = videos
 print(final_log_table)
-
 verified_files = []
 def return_verified():
-
     for i in range(len(log_dict)):
         if(len(log_dict[i]['error']) > 0 or log_dict[i]["Video"] == True):
-            print(colored("Found errors in the file{}\n Deleting the unsupported files and curroupted files ...",'red', attrs=['reverse', 'blink']).format(names[i]))
+            print(colored("Found errors in the file {}\n Deleting the unsupported files and curroupted files ...",'red', attrs=['reverse', 'blink']).format(names[i]))
             os.remove("data/"+names[i])
         if(log_dict[i]['error'] == '' and log_dict[i]['Video'] == False): 
             verified_files.append(log_dict[i]["name"])
-    print(verified_files)
     return verified_files
-return_verified()
