@@ -4,8 +4,8 @@ An open-source neural network model which can predict the instruments used in a 
 
 ## Requiremnents
 
-- Python 3.8 (or higher)
-- Tensorflow 2.4
+- Python v3.8 (or higher)
+- Tensorflow v2.4
 - Librosa
 - FFmpeg
 - MediaInfo
