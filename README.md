@@ -22,7 +22,7 @@ Software:-
 
 1.1 Purpose: The goal of our project is to build a Music Analysis System that can predict music labels in a recording like notes, number of instruments used, composer, onset and the next note.
 
-1.2 Document conventions: Following abbreviations have been used a couple of times in this document:
+1.2 Document conventions: Following abbreviations have been used a couple of times in this document:-
 - Artificial Intelligence (AI)
 - Long Short Term Memory (LSTM)
 - Gated Recurrent Unit (GRU)
@@ -37,7 +37,7 @@ Software:-
 
 2.1 Product perspective: Upon the completion of this project, the music analysts (end users) would be able to predict key labels to determine various characteristics of a music sample.
 
-2.2 Product features: This project aims to design a deep learning algorithm based on LSTM and GRU, which will be capable of analysing and predicting the following characteristics of a music segment:
+2.2 Product features: This project aims to design a deep learning algorithm based on LSTM and GRU, which will be capable of analysing and predicting the following characteristics of a music segment:-
 - Number of notes
 - Number of instruments used
 - Composer
@@ -57,11 +57,9 @@ Software:-
 
 
 ## 3. Functional Requirements
-Users should be able to give an audio segment as the input and the algorithm must predict the required labels associated with different time stamps for that audio. Following are the major requirements necessary to accomplish this goal:
-
-i) Libraries - Libraries like Librossa and Mingus will be used to study and apply EDA on the audio database. These libraries provide the necessary tools to visualise dataset features and retrieve useful information from the audio signals. Visualization of the data is important to make sure that there are no corrupt or empty files and whether all the audio files are in the same format or not.
-
-ii) High-end System - Given an unusually large dataset, it is necessary to either go with a virtual machine or a high end system to perform pre-processing and model training in a reasonable amount of time.
+Users should be able to give an audio segment as the input and the algorithm must predict the required labels associated with different time stamps for that audio. Following are the major requirements necessary to accomplish this goal:-
+- Libraries - Libraries like Librossa and Mingus will be used to study and apply EDA on the audio database. These libraries provide the necessary tools to visualise dataset features and retrieve useful information from the audio signals. Visualization of the data is important to make sure that there are no corrupt or empty files and whether all the audio files are in the same format or not.
+- High-end System - Given an unusually large dataset, it is necessary to either go with a virtual machine or a high end system to perform pre-processing and model training in a reasonable amount of time.
 
 
 ## 4. Non-functional Requirements
