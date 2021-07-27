@@ -38,17 +38,17 @@ Software:-
 2.1 Product perspective: Upon the completion of this project, the music analysts (end users) would be able to predict key labels to determine various characteristics of a music sample.
 
 2.2 Product features: This project aims to design a deep learning algorithm based on LSTM and GRU, which will be capable of analysing and predicting the following characteristics of a music segment:
-i) Number of notes
-ii) Number of instruments used
-iii) Composer
-iv) Onset times of the notes
-v) Next note
+- Number of notes
+- Number of instruments used
+- Composer
+- Onset times of the notes
+- Next note
 
 2.3 User class and characteristics: The end users of this project would be music analysts from companies that provide music streaming services to offer the top quality songs.
 
 2.4 Operating environment: Considering the size of our dataset, the development team would require a cloud based virtual machine to perform all the necessary operations like EDA, training and testing of the dataset.
 
-2.5 Constraints: 
+2.5 Constraints:- 
 - Extremely large dataset
 - High computational power required
 - Need of a centralised database management system
