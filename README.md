@@ -49,9 +49,9 @@ v) Next note
 2.4 Operating environment: Considering the size of our dataset, the development team would require a cloud based virtual machine to perform all the necessary operations like EDA, training and testing of the dataset.
 
 2.5 Constraints: 
-i) Extremely large dataset
-ii) High computational power required
-iii) Need of a centralised database management system
+- Extremely large dataset
+- High computational power required
+- Need of a centralised database management system
 
 2.6 Assumptions and dependencies: We have gathered an audio dataset that has 330 classical music recordings, assuming that the data is 100% correct (no corrupt audio files) and properly labeled.
 
