@@ -33,7 +33,7 @@ iv) Exploratory Data Analysis (EDA)
 1.4 Scope: AI technology has the ability to learn a musician’s style and sound by analyzing previous songs, common note combinations, and the creator’s likely next move. So this project will help analyze instruments, composers, and notes to determine playlists, artists, and songs that fit the style of the user.
 
 
-2. General Description
+## 2. General Description
 
 2.1 Product perspective: Upon the completion of this project, the music analysts (end users) would be able to predict key labels to determine various characteristics of a music sample.
 
@@ -56,7 +56,7 @@ iii) Need of a centralised database management system
 2.6 Assumptions and dependencies: We have gathered an audio dataset that has 330 classical music recordings, assuming that the data is 100% correct (no corrupt audio files) and properly labeled.
 
 
-3. Functional Requirements
+## 3. Functional Requirements
 Users should be able to give an audio segment as the input and the algorithm must predict the required labels associated with different time stamps for that audio. Following are the major requirements necessary to accomplish this goal:
 
 i) Libraries - Libraries like Librossa and Mingus will be used to study and apply EDA on the audio database. These libraries provide the necessary tools to visualise dataset features and retrieve useful information from the audio signals. Visualization of the data is important to make sure that there are no corrupt or empty files and whether all the audio files are in the same format or not.
@@ -64,7 +64,7 @@ i) Libraries - Libraries like Librossa and Mingus will be used to study and appl
 ii) High-end System - Given an unusually large dataset, it is necessary to either go with a virtual machine or a high end system to perform pre-processing and model training in a reasonable amount of time.
 
 
-4. Non-functional Requirements
+## 4. Non-functional Requirements
 
 4.1 Performance requirements 
 To successfully integrate this Music Analysis System with a dedicated software for music analysis eligible to perform on an industrial stage, the prediction accuracy should be around 40-60%, considering the dataset provided remains the same. 
