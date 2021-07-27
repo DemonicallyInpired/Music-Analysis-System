@@ -18,7 +18,7 @@ Software:-
 - MediaInfo
 
 
-1. Introduction
+## 1. Introduction
 
 1.1 Purpose: The goal of our project is to build a Music Analysis System that can predict music labels in a recording like notes, number of instruments used, composer, onset and the next note.
 
