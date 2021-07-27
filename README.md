@@ -23,10 +23,10 @@ Software:-
 1.1 Purpose: The goal of our project is to build a Music Analysis System that can predict music labels in a recording like notes, number of instruments used, composer, onset and the next note.
 
 1.2 Document conventions: Following abbreviations have been used a couple of times in this document:
-i) Artificial Intelligence (AI)
-ii) Long Short Term Memory (LSTM)
-iii) Gated Recurrent Unit (GRU)
-iv) Exploratory Data Analysis (EDA) 
+- Artificial Intelligence (AI)
+- Long Short Term Memory (LSTM)
+- Gated Recurrent Unit (GRU)
+- Exploratory Data Analysis (EDA) 
   
 1.3 Intended audience: The project can be used by music analysts who want to compose the best quality music for the people by studying the occurrences of notes. This can also be deployed as a recommendation system by music streaming services. 
 
