@@ -10,7 +10,7 @@ Hardware:-
 - RAM: 2 GB or higher
 
 Software:-
-- Windows 7 or more.
+- Windows 7 or better.
 - Python 3.8 (or higher) 
 - Tensorflow 2.4 
 - Librosa 
